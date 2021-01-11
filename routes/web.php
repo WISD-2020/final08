@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('layouts.master');
-//})->name('home');
-
 Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::prefix('admin')->group(function () {
