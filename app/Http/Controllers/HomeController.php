@@ -18,7 +18,6 @@ class HomeController extends Controller
 
     public function decide()
     {
-
         if(auth()->user()->type=="admin"){
             return redirect()->route('admin.rings.index');
         }
