@@ -4,13 +4,48 @@
 
 <img src="https://i.imgur.com/UwqNhFi.png">
 
+點選畫面正中央的「請先登入」抑或是頁面右上角的「登入」鈕都可以登入
+
 - **購買戒指**
 
 <img src="https://i.imgur.com/n7mkuo3.png">
 
+點選商品最右欄的「ADD TO CART」即可將要購買的樣式加入購物車
+
 - **購物車**
 
 <img src="https://i.imgur.com/0gWrf7d.png">
+
+- **管理者 戒指樣式管理**
+
+<img src="https://i.imgur.com/VcMJECf.png">
+
+- **管理者 編輯戒指樣式**
+
+<img src="https://i.imgur.com/j5Hfyjj.png">
+
+- **管理者 新增戒指樣式**
+
+<img src="https://i.imgur.com/6opxaqd.png">
+
+## 系統名稱及作用
+
+- **系統名稱**
+
+ 線上訂購戒指系統
+
+- **作用**
+
+旨在讓顧客可線上訂製自己想要的戒指，提供顧客更便捷的訂購管道
+
+## 系統的主要功能
+
+## 前台
+
+- **首頁**
+
+<a herf="https://github.com/3A732002">
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
