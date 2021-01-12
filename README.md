@@ -8,7 +8,7 @@
 </p>
 
 ## 系統擷取畫面
-<img src="https://imgur.com/a/zvjpPrK">
+<a href="https://imgur.com/a/zvjpPrK"><img src="https://imgur.com/a/zvjpPrK"></a>
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
