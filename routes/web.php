@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/home',[HomeController::class,'indexlogin'])->name('home.login.ed');
 
-Route::prefix('admin')->group(function () {
+Route::get('/decide',[HomeController::class,'decide'])->name('decide');
+
+Route::middleware(['auth:sanctum', 'verified'])->prefix('admin')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
     Route::get('rings', [AdminRingElementsController::class, 'index'])->name('admin.rings.index');
     Route::get('rings/create', [AdminRingElementsController::class, 'create'])->name('admin.rings.create');
@@ -27,6 +30,7 @@ Route::prefix('admin')->group(function () {
     Route::post('rings',[AdminRingElementsController::class,'store'])->name('admin.rings.store');
     Route::patch('rings/{id}',[AdminRingElementsController::class,'update'])->name('admin.rings.update');
 });
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
