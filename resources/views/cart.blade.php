@@ -13,7 +13,150 @@
   <body>
 
   <!--nav-->
-  @include('layouts.partials.navigation')
+  <header id="aa-header">
+      <!-- start header top  -->
+      <div class="aa-header-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="aa-header-top-area">
+                          <!-- start header top left -->
+                          <div class="aa-header-top-left">
+                              <!-- start language -->
+                              <div class="aa-language">
+                                  <div class="dropdown">
+                                      <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                          <img src="img/flag/english.jpg" alt="english flag">ENGLISH
+                                          <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                          <li><a href="#"><img src="img/flag/french.jpg" alt="">FRENCH</a></li>
+                                          <li><a href="#"><img src="img/flag/english.jpg" alt="">ENGLISH</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!-- / language -->
+
+                              <!-- start currency -->
+                              <div class="aa-currency">
+                                  <div class="dropdown">
+                                      <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                          <i class="fa fa-usd"></i>USD
+                                          <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                          <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
+                                          <li><a href="#"><i class="fa fa-jpy"></i>YEN</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!-- / currency -->
+                              <!-- start cellphone -->
+                              <div class="cellphone hidden-xs">
+                                  <p><span class="fa fa-phone"></span>00-62-658-658</p>
+                              </div>
+                              <!-- / cellphone -->
+                          </div>
+                          <!-- / header top left -->
+                          <div class="aa-header-top-right">
+                              <ul class="aa-head-top-nav-right">
+                                  <li><a href="account.html">My Account</a></li>
+                                  <li class="hidden-xs"><a href="{{ route('customer.buy.index') }}">Wishlist</a></li>
+                                  <li class="hidden-xs"><a href="{{ route('customer.cart.index') }}">My Cart</a></li>
+                                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
+                                  {{--                                <li><a href="" data-toggle="modal" data-target="#login-modal">登入</a></li>--}}
+                                  {{--                                  <li class="hidden-xs"><a href="{{route('login')}}">登入</a></li>--}}
+                                  <form method="POST" action="{{ route('logout') }}">
+                                      @csrf
+
+                                      <x-jet-dropdown-link href="{{ route('logout') }}"
+                                                           onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                          {{ __('Logout') }}
+                                      </x-jet-dropdown-link>
+                                  </form>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- / header top  -->
+
+      <!-- start header bottom  -->
+      <div class="aa-header-bottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="aa-header-bottom-area">
+                          <!-- logo  -->
+                          <div class="aa-logo">
+                              <!-- Text based logo -->
+                              <a href="{{route('home.login.ed')}}">
+                                  <span class="fa fa-shopping-cart"></span>
+                                  <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+                              </a>
+                              <!-- img based logo -->
+                              <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+                          </div>
+                          <!-- / logo  -->
+                          <!-- cart box -->
+                      {{--                          <div class="aa-cartbox">--}}
+                      {{--                              <a class="aa-cart-link" href="#">--}}
+                      {{--                                  <span class="fa fa-shopping-basket"></span>--}}
+                      {{--                                  <span class="aa-cart-title">SHOPPING CART</span>--}}
+                      {{--                                  <span class="aa-cart-notify">2</span>--}}
+                      {{--                              </a>--}}
+                      {{--                              <div class="aa-cartbox-summary">--}}
+                      {{--                                  <ul>--}}
+                      {{--                                      --}}{{--                                      <li>--}}
+                      {{--                                      --}}{{--                                          <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>--}}
+                      {{--                                      --}}{{--                                          <div class="aa-cartbox-info">--}}
+                      {{--                                      --}}{{--                                              <h4><a href="#">Product Name</a></h4>--}}
+                      {{--                                      --}}{{--                                              <p>1 x $250</p>--}}
+                      {{--                                      --}}{{--                                          </div>--}}
+                      {{--                                      --}}{{--                                          <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>--}}
+                      {{--                                      --}}{{--                                      </li>--}}
+                      {{--                                      --}}{{--                                      <li>--}}
+                      {{--                                      --}}{{--                                          <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>--}}
+                      {{--                                      --}}{{--                                          <div class="aa-cartbox-info">--}}
+                      {{--                                      --}}{{--                                              <h4><a href="#">Product Name</a></h4>--}}
+                      {{--                                      --}}{{--                                              <p>1 x $250</p>--}}
+                      {{--                                      --}}{{--                                          </div>--}}
+                      {{--                                      --}}{{--                                          <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>--}}
+                      {{--                                      --}}{{--                                      </li>--}}
+                      {{--                                      <li>--}}
+                      {{--                      <span class="aa-cartbox-total-title">--}}
+                      {{--                        Total--}}
+                      {{--                      </span>--}}
+                      {{--                                          <span class="aa-cartbox-total-price">--}}
+                      {{--                        $500--}}
+                      {{--                      </span>--}}
+                      {{--                                      </li>--}}
+                      {{--                                  </ul>--}}
+                      {{--                                  <a class="aa-cartbox-checkout aa-primary-btn" href="#">Checkout</a>--}}
+                      {{--                              </div>--}}
+                      {{--                          </div>--}}
+                      <!-- / cart box -->
+                          <!-- search box -->
+                      {{--                          <div class="aa-search-box">--}}
+                      {{--                              <form action="">--}}
+                      {{--                                  <input type="text" name="" id="" placeholder="Search here ex. 'man' ">--}}
+                      {{--                                  <button type="submit"><span class="fa fa-search"></span></button>--}}
+                      {{--                              </form>--}}
+                      {{--                          </div>--}}
+                      <!-- / search box -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- / header bottom  -->
+  </header>
+
+  <!-- catg header banner section -->
+
 
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
@@ -48,64 +191,50 @@
                         <th></th>
                         <th>Product</th>
                         <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
+{{--                        <th>Quantity</th>--}}
+{{--                        <th>Total</th>--}}
                       </tr>
                     </thead>
                     <tbody>
+                    @foreach($elements as $element)
                       <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="img/man/polo-shirt-1.png" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$250</td>
+                              <form action="{{ route('customer.cart.destroy', $element->id) }}" method="post" style="display: inline">
+                                  @method('delete')
+                                  @csrf
+
+                        <td><button class="btn btn-sm btn-danger" type="submit">刪除</button></td>
+                          @method('delete')
+                          @csrf
+                        <td><a href="#"><img style="width: 200px;" src="storage/img/ringelements/{{ $element->figure }}" alt="img"></a></td>
+                        <td><a class="aa-cart-title" href="#">{{ $element->name }}</a></td>
+                        <td>{{ $element->price }}</td>
+{{--                        <td><input class="aa-cart-quantity" type="number" value="1"></td>--}}
+{{--                        <td>$250</td>--}}
+                          </form>
                       </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="img/man/polo-shirt-2.png" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$150</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$150</td>
-                      </tr>
-                      <tr>
-                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img src="img/man/polo-shirt-3.png" alt="img"></a></td>
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$50</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td>$50</td>
-                      </tr>
-                      <tr>
-                        <td colspan="6" class="aa-cart-view-bottom">
-                          <div class="aa-cart-coupon">
-                            <input class="aa-coupon-code" type="text" placeholder="Coupon">
-                            <input class="aa-cart-view-btn" type="submit" value="Apply Coupon">
-                          </div>
-                          <input class="aa-cart-view-btn" type="submit" value="Update Cart">
-                        </td>
-                      </tr>
+                    @endforeach
                       </tbody>
                   </table>
                 </div>
              </form>
              <!-- Cart Total view -->
-             <div class="cart-view-total">
-               <h4>Cart Totals</h4>
-               <table class="aa-totals-table">
-                 <tbody>
-                   <tr>
-                     <th>Subtotal</th>
-                     <td>$450</td>
-                   </tr>
-                   <tr>
-                     <th>Total</th>
-                     <td>$450</td>
-                   </tr>
-                 </tbody>
-               </table>
-               <a href="#" class="aa-cart-view-btn">Proced to Checkout</a>
+{{--             <div class="cart-view-total">--}}
+{{--               <h4>Cart Totals</h4>--}}
+{{--               <table class="aa-totals-table">--}}
+{{--                 <tbody>--}}
+{{--                   <tr>--}}
+{{--                     <th>Subtotal</th>--}}
+{{--                     <td>$450</td>--}}
+{{--                   </tr>--}}
+{{--                   <tr>--}}
+{{--                       @foreach($elements as $element)--}}
+{{--                     <th>Total</th>--}}
+{{--                     <td></td>--}}
+{{--                       @endforeach--}}
+{{--                   </tr>--}}
+{{--                 </tbody>--}}
+{{--               </table>--}}
+               <a href="{{route('customer.order.index')}}" class="aa-cart-view-btn">送出訂單</a>
              </div>
            </div>
          </div>
@@ -139,7 +268,7 @@
   @include('layouts.partials.footer')
 
   <!-- Login Modal -->
-  @include('layouts.partials.login.modal')
+  @include('layouts.partials.loginmodal')
 
   {{--script--}}
   @include('layouts.partials.script')

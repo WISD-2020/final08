@@ -12,6 +12,7 @@ class Ring extends Model
     protected $table = 'rings';
 
     protected $fillable = [
+        'id',
         'name',
         'price',
         'type',
@@ -19,6 +20,7 @@ class Ring extends Model
     ];
 
     protected $casts = [
+        'id' => 'string',
         'name' => 'string',
         'price' => 'integer',
         'type' => 'string',

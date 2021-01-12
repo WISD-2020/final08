@@ -74,11 +74,11 @@
                           <div class="aa-header-top-right">
                               <ul class="aa-head-top-nav-right">
                                   <li><a href="account.html">My Account</a></li>
-                                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
+                                  <li class="hidden-xs"><a href="{{ route('customer.buy.index') }}">Wishlist</a></li>
+                                  <li class="hidden-xs"><a href="{{ route('customer.cart.index') }}">My Cart</a></li>
                                   <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
                                   {{--                                <li><a href="" data-toggle="modal" data-target="#login-modal">登入</a></li>--}}
-                                  <li class="hidden-xs"><a href="{{route('login')}}">登入</a></li>
+{{--                                  <li class="hidden-xs"><a href="{{route('login')}}">登入</a></li>--}}
                                   <form method="POST" action="{{ route('logout') }}">
                                       @csrf
 
@@ -106,7 +106,7 @@
                           <!-- logo  -->
                           <div class="aa-logo">
                               <!-- Text based logo -->
-                              <a href="{{route('home')}}">
+                              <a href="{{route('home.login.ed')}}">
                                   <span class="fa fa-shopping-cart"></span>
                                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                               </a>
@@ -183,7 +183,7 @@
                <span data-seq>設計屬於您的戒指</span>
                 <h2 data-seq>Design your Ring </h2>
                 <p data-seq>現在就來設計!</p>
-                <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">開始設計</a>
+                <a data-seq href="{{ route('customer.design.first') }}" class="aa-shop-now-btn aa-secondary-btn">開始設計</a>
               </div>
             </li>
             <!-- single slide item -->
@@ -195,7 +195,7 @@
                       <span data-seq>設計屬於您的戒指</span>
                       <h2 data-seq>Design your Ring </h2>
                       <p data-seq>現在就來設計!</p>
-                      <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">開始設計</a>
+                      <a data-seq href="{{ route('customer.design.first') }}" class="aa-shop-now-btn aa-secondary-btn">開始設計</a>
                   </div>
               </li>
             <!-- single slide item -->

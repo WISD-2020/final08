@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminRingElementsController;
+use App\Http\Controllers\BuyController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\DesignController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +24,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/home',[HomeController::class,'indexlogin'])->name('home.login.ed');
 
+
+
 Route::get('/decide',[HomeController::class,'decide'])->name('decide');
+
+Route::prefix('design')->group(function () {
+    Route::get('/', [DesignController::class, 'first'])->name('customer.design.first');
+    Route::get('second/{id}', [DesignController::class, 'second'])->name('customer.design.second');
+    Route::get('third/{id}', [DesignController::class, 'third'])->name('customer.design.third');
+});
+
+Route::prefix('buy')->group(function () {
+    Route::get('/', [BuyController::class, 'index'])->name('customer.buy.index');
+    Route::get('rings/{id}', [BuyController::class, 'cart'])->name('customer.buy.cart');
+//    Route::get('rings/{id}', [DesignController::class, 'third'])->name('customer.buy.third');
+});
+
+Route::get('cart', [CartController::class, 'index'])->name('customer.cart.index');
+Route::delete('cart/{id}', [CartController::class, 'cartdel'])->name('customer.cart.destroy');
+
+Route::get('order', [OrderController::class, 'index'])->name('customer.order.index');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('admin')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');

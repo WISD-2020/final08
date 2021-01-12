@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta content="width=device-width">
     <title>@yield('title')</title>
 
       {{--link--}}
@@ -12,8 +12,7 @@
   </head>
   <!-- !Important notice -->
   <!-- Only for product page body tag have to added .productPage class -->
-  <body class="productPage">
-
+  <body >
   <!--nav-->
 {{--  @include('layouts.partials.navigation')--}}
   <header id="aa-header">
@@ -109,7 +108,7 @@
                               <a class="aa-cart-link" href="#">
                                   <span class="fa fa-shopping-basket"></span>
                                   <span class="aa-cart-title">SHOPPING CART</span>
-                                  <span class="aa-cart-notify">2</span>
+{{--                                  <span class="aa-cart-notify">2</span>--}}
                               </a>
                               <div class="aa-cartbox-summary">
                                   <ul>
@@ -211,11 +210,12 @@
                 @foreach($elements as $element)
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="storage/img/ringelements/0ACbGX4D6RtdE8oJuV3IUBOHlav35YxBBygow4EY.png" alt="polo shirt img"></a>
-                    <a class="aa-add-card-btn" href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                    <a class="aa-product-img" href="{{route('customer.design.third',$element->id) }}"><img src="storage/img/ringelements/{{ $element->figure }}" alt="polo shirt img"></a>
+                    <a class="aa-add-card-btn" href="{{route('customer.design.third',$element->id) }}"><span class="fa fa-shopping-cart"></span>Select!</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href="#">{{ $element->name }}</a></h4>
-                      <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                      <span class="aa-product-price">{{ $element->price }}$</span>
+
                       <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
                     </figcaption>
                   </figure>
@@ -577,11 +577,11 @@
             <div class="aa-sidebar-widget">
               <h3>Category</h3>
               <ul class="aa-catg-nav">
-                <li><a href="#">Men</a></li>
-                <li><a href="">Women</a></li>
-                <li><a href="">Kids</a></li>
-                <li><a href="">Electornics</a></li>
-                <li><a href="">Sports</a></li>
+                <li><a href="">表面工藝</a></li>
+{{--                <li><a href="">Women</a></li>--}}
+{{--                <li><a href="">Kids</a></li>--}}
+{{--                <li><a href="">Electornics</a></li>--}}
+{{--                <li><a href="">Sports</a></li>--}}
               </ul>
             </div>
             <!-- single sidebar -->

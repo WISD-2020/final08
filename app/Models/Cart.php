@@ -12,6 +12,7 @@ class Cart extends Model
     protected $table = 'carts';
 
     protected $fillable = [
+        'ringid',
         'name',
         'price',
         'type',
@@ -19,6 +20,7 @@ class Cart extends Model
     ];
 
     protected $casts = [
+        'ringid' => 'string',
         'name' => 'string',
         'price' => 'integer',
         'type' => 'string',

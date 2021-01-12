@@ -13,9 +13,14 @@ class CreateRingsTable extends Migration
      */
     public function up()
     {
-//        Schema::create('rings', function (Blueprint $table) {
-//            //
-//        });
+        Schema::create('rings', function (Blueprint $table) {
+            $table->string('id');
+            $table->string('name');
+            $table->integer('price');
+            $table->string('type');
+            $table->text('figure');
+            $table->timestamps();
+        });
     }
 
     /**
