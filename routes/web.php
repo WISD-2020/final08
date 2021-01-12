@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
-use App\Http\Controllers\AdminPostsController;
+use App\Http\Controllers\AdminRingElementsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,10 +20,12 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
-
-    Route::get('posts', [AdminPostsController::class, 'index'])->name('admin.posts.index');
-    Route::get('posts/create', [AdminPostsController::class, 'create'])->name('admin.posts.create');
-    Route::get('posts/{id}/edit', [AdminPostsController::class, 'edit'])->name('admin.posts.edit');
+    Route::get('rings', [AdminRingElementsController::class, 'index'])->name('admin.rings.index');
+    Route::get('rings/create', [AdminRingElementsController::class, 'create'])->name('admin.rings.create');
+    Route::get('rings/{id}/edit', [AdminRingElementsController::class, 'edit'])->name('admin.rings.edit');
+    Route::delete('rings/{id}',[AdminRingElementsController::class,'destroy'])->name('admin.rings.destroy');
+    Route::post('rings',[AdminRingElementsController::class,'store'])->name('admin.rings.store');
+    Route::patch('rings/{id}',[AdminRingElementsController::class,'update'])->name('admin.rings.update');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
