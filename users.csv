@@ -1,0 +1,3 @@
+﻿id	name	email	email_verified_at	password	type	two_factor_secret	two_factor_recovery_codes	remember_token	current_team_id	profile_photo_path	created_at	updated_at
+1	zhenyu	asdfg10510588@gmail.com		$2y$10$oGzA4vBvMId3YJtreBWze.B39uFW8MG8DJDj5p0UkqYkK9T2869zG	admin			j5YweRLCJnVXtFcmnuO1uITbCdy1Hbrrtf38kC1mR3fwhwHzBCi0RepeCIrL			2021-01-12 15:47:35	2021-01-12 15:47:35
+3	customer	as10510588@gmail.com		$2y$10$4Yc.sI7mxZFsiv8JyBLQQeodq8vVfMKWatsjxBYd.dDaahVMmyS8e	customer			jI7zFPJWTumlggrrdRlar3Ob2zpNtH9ujAwEAwAuBcmOZLhEvMCXdHEOqyVR			2021-01-12 16:24:50	2021-01-12 16:24:50
